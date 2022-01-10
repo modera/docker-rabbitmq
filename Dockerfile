@@ -1,11 +1,11 @@
-FROM rabbitmq:3.6-management
+FROM rabbitmq:3.9.12-management
 
 LABEL maintainer "Sergei Vizel <http://github.com/cravler>"
 
 ADD \
-    https://bintray.com/rabbitmq/community-plugins/download_file?file_path=rabbitmq_delayed_message_exchange-0.0.1.ez \
-    /plugins/rabbitmq_delayed_message_exchange-0.0.1.ez
+    https://github.com/rabbitmq/rabbitmq-delayed-message-exchange/releases/download/3.9.0/rabbitmq_delayed_message_exchange-3.9.0.ez \
+    /plugins/rabbitmq_delayed_message_exchange-3.9.0.ez
 
 RUN \
-    chmod 0644 /plugins/rabbitmq_delayed_message_exchange-0.0.1.ez && \
+    chmod 0644 /plugins/rabbitmq_delayed_message_exchange-3.9.0.ez && \
     rabbitmq-plugins enable --offline rabbitmq_delayed_message_exchange
