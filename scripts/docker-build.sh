@@ -104,4 +104,4 @@ echo ""
 echo "BUILDING: ${REPOSITORY}"
 echo ""
 
-build_docker_image latest 3.12.4
+build_docker_image latest 3.12.13
